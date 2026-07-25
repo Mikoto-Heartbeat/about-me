@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me ~ルーティーン紹介~ | Home</title>
+    <!-- Google Fonts: M PLUS 1p -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- オリジナルCSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <div id="loader" class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- ページ遷移用スライドカバー -->
+    <div id="page-transition-cover" class="page-transition-cover"></div>
+
+    <!-- ヘッダー＆ナビゲーション -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo"><a href="index.html" class="transition-link">About me</a></h1>
+            
+            <!-- ハンバーガーメニューボタン (aria属性でアクセシビリティ対応) -->
+            <button id="hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="nav-menu" class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="transition-link">Home</a></li>
+                    <li><a href="about.html" class="transition-link">About</a></li>
+                    <li><a href="routine.html" class="transition-link">Routine</a></li>
+                    <li><a href="faq.html" class="transition-link">FAQ</a></li>
+                    <li><a href="contact.html" class="transition-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-content">
+        <!-- Heroセクション -->
+        <section class="hero">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="hero-title">Welcome to My Cyber Life</h2>
+                <p class="hero-subtitle">スーパーAIエンジニア専攻の日常とルーティーン</p>
+                <a href="routine.html" class="btn btn-primary transition-link">ルーティーンを見る</a>
+            </div>
+        </section>
+
+        <!-- ピックアップコンテンツ -->
+        <section class="section container">
+            <h2 class="section-title" data-aos="fade-right">Overview</h2>
+            <div class="card-grid">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-user-astronaut card-icon"></i>
+                    <h3>About Me</h3>
+                    <p>私の基本情報や専攻について紹介します。</p>
+                    <a href="about.html" class="btn btn-outline transition-link">詳細へ</a>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-clock card-icon"></i>
+                    <h3>My Routine</h3>
+                    <p>朝の起床から就寝までの学校生活のルーティーン。</p>
+                    <a href="routine.html" class="btn btn-outline transition-link">詳細へ</a>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-envelope card-icon"></i>
+                    <h3>Contact</h3>
+                    <p>お問い合わせやメッセージはこちらから。</p>
+                    <a href="contact.html" class="btn btn-outline transition-link">詳細へ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ページトップへ戻るボタン -->
+    <button id="back-to-top" class="back-to-top" aria-label="ページトップへ戻る">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p>&copy; 2026 中村命音 All Rights Reserved.</p>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- オリジナルJS -->
+    <script src="script.js"></script>
+</body>
+</html>

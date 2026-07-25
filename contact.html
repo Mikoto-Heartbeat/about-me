@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | About me ~ルーティーン紹介~</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loader" class="loader"><div class="loader-spinner"></div></div>
+    <div id="page-transition-cover" class="page-transition-cover"></div>
+
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo"><a href="index.html" class="transition-link">About me</a></h1>
+            <button id="hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu" class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="transition-link">Home</a></li>
+                    <li><a href="about.html" class="transition-link">About</a></li>
+                    <li><a href="routine.html" class="transition-link">Routine</a></li>
+                    <li><a href="faq.html" class="transition-link">FAQ</a></li>
+                    <li><a href="contact.html" class="transition-link" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-content">
+        <div class="page-header" data-aos="fade-in">
+            <h2 class="page-title">Contact</h2>
+            <p>お問い合わせフォーム</p>
+        </div>
+
+        <section class="section container">
+            <!-- Apple Cupertino × サイバーパンク を意識したフォームUI -->
+            <div class="form-wrapper" data-aos="zoom-in">
+                <form action="#" method="POST" id="contact-form" class="cupertino-form">
+                    
+                    <div class="form-group">
+                        <label for="name">名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" value="中村命音" required placeholder="例: 中村命音">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" value="ktc26a31k0003@edu.kyoto-tech.ac.jp" required placeholder="例: email@example.com">
+                    </div>
+
+                    <!-- 予測可能な選択肢はselectを使用 -->
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="age">年齢 <span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="age" name="age" required>
+                                    <option value="" disabled>選択してください</option>
+                                    <option value="18">18歳</option>
+                                    <option value="19" selected>19歳</option>
+                                    <option value="20">20歳</option>
+                                    <option value="21">21歳以上</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group half-width">
+                            <label for="gender">性別 <span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="gender" name="gender" required>
+                                    <option value="" disabled>選択してください</option>
+                                    <option value="男性" selected>男性</option>
+                                    <option value="女性">女性</option>
+                                    <option value="その他">その他</option>
+                                    <option value="回答しない">回答しない</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="affiliation">所属先 <span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select id="affiliation" name="affiliation" required>
+                                <option value="" disabled>選択してください</option>
+                                <option value="スーパーAIエンジニア専攻" selected>スーパーAIエンジニア専攻</option>
+                                <option value="ホワイトハッカー専攻">ホワイトハッカー専攻</option>
+                                <option value="スーパーITエンジニア専攻">スーパーITエンジニア専攻</option>
+                                <option value="ITエンジニア専攻">ITエンジニア専攻</option>
+                                <option value="AI・ロボット専攻">AI・ロボット専攻</option>
+                                <option value="その他">その他</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" required placeholder="お問い合わせ内容をご記入ください。">学校生活のルーティーンに関するお問い合わせ等</textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-submit">送信する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" aria-label="ページトップへ戻る"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <footer class="footer">
+        <p>&copy; 2026 中村命音 All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
