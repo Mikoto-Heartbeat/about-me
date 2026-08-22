@@ -360,6 +360,278 @@ img { max-width: 100%; height: auto; }
 .faq-answer p { padding-bottom: 20px; color: #ccc; }
 
 /* =========================================
+   6. 小説展示ページ専用スタイル
+========================================= */
+.novel-showcase {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.novel-feature {
+    display: grid;
+    grid-template-columns: 1.1fr 1.4fr;
+    gap: 30px;
+    background: linear-gradient(135deg, rgba(9, 127, 118, 0.12), rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
+}
+
+.novel-feature-visual {
+    min-height: 360px;
+    position: relative;
+    background:
+        linear-gradient(160deg, rgba(10, 10, 10, 0.2), rgba(9, 127, 118, 0.45)),
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15), transparent 30%),
+        linear-gradient(135deg, #1f2a2d, #0a0a0a 60%, #0d2f2d);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px;
+}
+
+.novel-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--color-white);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.novel-feature-body {
+    padding: 30px 28px 30px 0;
+}
+
+.novel-tag {
+    display: inline-block;
+    color: var(--color-main);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.novel-feature-body h3 {
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.novel-feature-body p {
+    color: #d7d7d7;
+    font-size: 1.02rem;
+    margin-bottom: 20px;
+}
+
+.novel-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    color: #b9b9b9;
+    font-size: 0.9rem;
+}
+
+.novel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.novel-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.novel-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-main);
+}
+
+.novel-card-cover {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cover-one {
+    background: linear-gradient(135deg, rgba(9,127,118,0.3), rgba(0,0,0,0.2)),
+    radial-gradient(circle at top left, rgba(255,255,255,0.2), transparent 22%),
+    linear-gradient(135deg, #21272a, #111);
+}
+
+.cover-two {
+    background: linear-gradient(135deg, rgba(207,98,15,0.24), rgba(0,0,0,0.18)),
+    radial-gradient(circle at 60% 25%, rgba(255,255,255,0.15), transparent 25%),
+    linear-gradient(135deg, #3a2b2a, #111);
+}
+
+.cover-three {
+    background: linear-gradient(135deg, rgba(9,127,118,0.22), rgba(0,0,0,0.18)),
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.2), transparent 20%),
+    linear-gradient(135deg, #1d2b30, #0d0d0d);
+}
+
+.novel-card-body {
+    padding: 20px;
+}
+
+.novel-card-body h4 {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.novel-card-body p {
+    color: #d0d0d0;
+    font-size: 0.96rem;
+}
+
+.novel-form-wrapper {
+    background: linear-gradient(180deg, rgba(17,17,17,0.9), rgba(12,12,12,0.8));
+}
+
+.form-title {
+    margin-bottom: 30px;
+}
+
+.novel-notice {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+}
+
+.novel-notice h4 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.novel-notice ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #d7d7d7;
+    line-height: 1.8;
+    font-size: 0.92rem;
+}
+
+.notice-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.notice-check input {
+    margin-top: 4px;
+    accent-color: var(--color-main);
+    width: 18px;
+    height: 18px;
+}
+
+.submission-message {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(9, 127, 118, 0.4);
+    background: rgba(9, 127, 118, 0.08);
+    color: #dff7f4;
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+.novel-card {
+    cursor: pointer;
+}
+
+.ac-text {
+  color: rgb(207, 98, 15);
+  text-decoration: underline;
+}
+
+.novel-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 2000;
+}
+
+.novel-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.novel-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+}
+
+.novel-modal-panel {
+    position: relative;
+    width: min(760px, 100%);
+    max-height: 80vh;
+    overflow-y: auto;
+    background: linear-gradient(180deg, rgba(19, 23, 24, 0.96), rgba(10, 10, 10, 0.98));
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 32px 28px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.novel-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.novel-modal-panel h3 {
+    margin-top: 10px;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--color-white);
+}
+
+.novel-modal-meta {
+    color: var(--color-main);
+    margin: 12px 0 18px;
+    font-weight: 700;
+}
+
+.novel-modal-content {
+    color: #e9e9e9;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+/* =========================================
    6. お問い合わせフォーム (Cupertino × Cyberpunk)
 ========================================= */
 .form-wrapper {
@@ -542,4 +814,13 @@ img { max-width: 100%; height: auto; }
     .form-row { flex-direction: column; gap: 0; }
     .form-wrapper { padding: 30px 20px; }
     .profile-wrapper { gap: 30px; }
+    .novel-feature {
+        grid-template-columns: 1fr;
+    }
+    .novel-feature-body {
+        padding: 24px 20px 28px;
+    }
+    .novel-grid {
+        grid-template-columns: 1fr;
+    }
 }

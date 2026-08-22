@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel Reader | About me ~ルーティーン紹介~</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loader" class="loader"><div class="loader-spinner"></div></div>
+    <div id="page-transition-cover" class="page-transition-cover"></div>
+
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo"><a href="index.html" class="transition-link">About me</a></h1>
+            <button id="hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu" class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="transition-link">Home</a></li>
+                    <li><a href="about.html" class="transition-link">About</a></li>
+                    <li><a href="routine.html" class="transition-link">Routine</a></li>
+                    <li><a href="novel.html" class="transition-link" aria-current="page">Novel</a></li>
+                    <li><a href="faq.html" class="transition-link">FAQ</a></li>
+                    <li><a href="contact.html" class="transition-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-content">
+        <div class="page-header" data-aos="fade-in">
+            <h2 class="page-title">Reading Room</h2>
+            <p>小説を読む</p>
+        </div>
+
+        <section class="section container">
+            <div class="story-reader" data-aos="fade-up">
+                <div class="story-reader-header">
+                    <span id="story-tag" class="novel-tag">幻想</span>
+                    <h3 id="story-title">タイトル</h3>
+                    <p id="story-author" class="story-author">作者</p>
+                </div>
+
+                <article id="story-content" class="story-content">
+                    本文を読み込んでいます。
+                </article>
+
+                <div class="story-actions">
+                    <a href="novel.html" class="btn btn-outline transition-link">展示室へ戻る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" aria-label="ページトップへ戻る"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <footer class="footer">
+        <p>&copy; 2026 中村命音 All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const stories = {
+            'moon-garden': {
+                tag: '幻想',
+                title: '色彩',
+                author: '時々 命音',
+                content: '眠りにつく前、窓辺に置かれた白い瓶が、月の光をこぼしていた。私はそれを抱きしめるようにして、ひとりの声を聞いた。\n\n「まだ眠らないで」と。\n\n眠りの中で人は思い出す。失ったものを、もう一度持ち帰るために。私はその夜、月の庭へと歩いていった。そこには、誰にも言えなかった小さな約束が、静かに咲いていた。\n\n光の輪のように揺れる花びらが、私の名前を呼んでいる気がした。私は何かを取り戻した。そう、ずっと探していた、ほんの少しだけの幸せだ。\n\nふと目を開けると、瓶の中に月の粒が残っていた。私はそれを指の腹にのせ、眠りの底で小さく笑った。'
+            },
+            'far-away-you': {
+                tag: 'サスペンス / ホラー',
+                title: '食べないと死ぬ',
+                author: '時々 命音',
+                content: 'グ――。お腹すいたな。食べ物、探さなきゃ。\n\n駅のホームで笑った声が、秋の風のように心を揺らし続ける。遠くにいる君に会うたび、言葉の代わりに遠い景色が届く。\n\n時間が経っても、あの白い制服の襟元だけが、季節と一緒に変わらずに残っている。私は今も、君へ向かう電車の窓に指を置いている。\n\nたぶん、青春とはそういうものだ。現実に触れられない距離を、思い出で包み込むこと。だから、今でも君の名前は、たとえ何か月も会えなくても、胸の奥で静かに光っている。'
+            },
+            'lost-bookshelf-key': {
+                tag: 'ミステリー',
+                title: '消えた本棚の鍵',
+                author: '時々 命音',
+                content: '本の間に入っていた赤い鍵は、誰にとっても思い出のあるものだった。\n\n図書室の奥にある古い本棚だけが、いつも静かに鍵を閉じていた。私はその鍵を握りしめ、ひとつずつページをめくっていく。\n\nすると、失われたはずの記憶が、新聞の折り目のように浮かび上がる。誰も見なかったはずの空白の時間が、やっと夜の隅で眠りから覚めた。\n\n鍵を掛けた男の影は、もういない。だが、誰かが本棚の向こうに、最後の一文だけを残していった気がした。その一文だけが、今の私を変えている。'
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const storyId = params.get('id') || 'moon-garden';
+        const story = stories[storyId] || stories['moon-garden'];
+
+        document.getElementById('story-tag').textContent = story.tag;
+        document.getElementById('story-title').textContent = story.title;
+        document.getElementById('story-author').textContent = `作者：${story.author}`;
+        document.getElementById('story-content').textContent = story.content;
+    </script>
+</body>
+</html>
