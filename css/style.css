@@ -5,14 +5,14 @@
 ========================================= */
 :root {
     /* メイン・アクセント・背景色 (要件指定) */
-    --color-main: rgb(9, 127, 118); /* #097F76 */
-    --color-accent: rgb(207, 98, 15); /* #CF620F */
-    --color-bg: #000000;
-    --color-text: #E0E0E0;
-    --color-white: #FFFFFF;
+    --color-main: rgb(21, 125, 216); /* #097F76 */
+    --color-accent: rgb(162, 221, 33); /* #CF620F */
+    --color-bg: #05575B;
+    --color-text: #ebe4f0;
+    --color-white: #ddcdcd;
     
     /* Cupertino風のすりガラスやフォーム用の色 */
-    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(96, 0, 29, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     
     /* 余白やフォント設定 */
@@ -100,7 +100,7 @@ img { max-width: 100%; height: auto; }
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #05575B;
     backdrop-filter: blur(10px); /* すりガラス効果 */
     z-index: 1000;
     border-bottom: 1px solid var(--glass-border);
@@ -168,7 +168,7 @@ img { max-width: 100%; height: auto; }
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, #111 0%, #000 100%);
+    background: radial-gradient(circle at center, #8d859859 0%, #2e077c38 100%);
     position: relative;
     padding: 0 20px;
 }
@@ -179,7 +179,7 @@ img { max-width: 100%; height: auto; }
     top: 0; left: 0; width: 100%; height: 100%;
     background-image: 
         linear-gradient(rgba(9, 127, 118, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(9, 127, 118, 0.1) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(12, 126, 117, 0.1) 1px, transparent 1px);
     background-size: 40px 40px;
     z-index: 0;
 }
@@ -203,7 +203,7 @@ img { max-width: 100%; height: auto; }
     padding-top: 150px;
     padding-bottom: 50px;
     text-align: center;
-    background-color: #0a0a0a;
+    background-color: #0b0b0b;
     border-bottom: 1px solid var(--color-main);
 }
 .page-title {
@@ -224,10 +224,11 @@ img { max-width: 100%; height: auto; }
 .card {
     background-color: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 40px 20px;
     text-align: center;
     transition: transform 0.3s;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 .card:hover {
     transform: translateY(-5px);
@@ -260,7 +261,7 @@ img { max-width: 100%; height: auto; }
 .profile-image-placeholder {
     flex: 1 1 300px;
     height: 300px;
-    background-color: #111;
+    background-color: #0a0a0a;
     border: 2px dashed var(--color-main);
     border-radius: 20px;
     display: flex;
@@ -421,6 +422,7 @@ img { max-width: 100%; height: auto; }
     font-size: clamp(1.8rem, 2vw, 2.5rem);
     color: var(--color-white);
     margin-bottom: 16px;
+    
 }
 
 .novel-feature-body p {
@@ -446,9 +448,10 @@ img { max-width: 100%; height: auto; }
 .novel-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
-    border-radius: 18px;
+    border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .novel-card:hover {
