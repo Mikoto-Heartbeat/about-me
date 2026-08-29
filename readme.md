@@ -2,7 +2,7 @@
 
 # About Me 
 
-サイトURL: [http://127.0.0.1:5500/index.html](https://mikoto-heartbeat.github.io/about-me/index.html)
+サイトURL:  https://mikoto-heartbeat.github.io/about-me/
 
 このサイトは私の自己紹介のために制作しました。
 私はサイバーパンクというゲームが好きなので、近未来を彷彿とさせるデザインにしました。
