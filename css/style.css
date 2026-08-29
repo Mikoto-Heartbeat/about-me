@@ -254,9 +254,13 @@ img { max-width: 100%; height: auto; }
     max-width: 300px;
     height: 300px;
     object-fit: cover; /* 画像の比率を保ったまま、指定サイズに綺麗に切り取る */
-    border-radius: 20px; /* Apple風の角丸 */
+    border-radius: 20px;
     border: 2px solid var(--color-main); /* サイバーパンクカラーの枠線 */
     box-shadow: 0 0 15px rgba(9, 127, 118, 0.3); /* ほんのり光らせる */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px; /* 画像の幅を指定 */
 }
 .profile-image-placeholder {
     flex: 1 1 300px;
